@@ -1,3 +1,2 @@
-/usr/local/bin/python3 /Users/mac/Documents/Python-learning/ALIENINVASION/alien_invasion.py
-fd
-ad
+hai
+ lion
