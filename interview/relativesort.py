@@ -1,0 +1,51 @@
+
+class Solution:
+    def relativeSortArray(self, arr1, arr2):
+        result = []
+        
+        for i in range(len(arr2)):
+            for j in range(len(arr1)):
+                if arr1[j] == arr2[i]:
+                    result.append(arr1[j])
+                    arr1[j] = -1
+        
+        arr1.sort()
+        
+        for num in arr1:
+            if num != -1:
+                result.append(num)
+                
+        return result
+'''
+i am the fooolest of the fools with knowing not this simple dcitionary method - swhoich would have sufficded for a easy poroblem
+'''
+class Solution:
+    def relativeSortArray(self, arr1, arr2):
+        from collections import defaultdict
+
+        count_map = defaultdict(int)
+        remaining = []
+        result = []
+
+        # Initialize count map with relative order elements
+        for num in arr2:
+            count_map[num] = 0
+
+        # Count occurrences of elements in target array
+        for num in arr1:
+            if num in count_map:
+                count_map[num] += 1
+            else:
+                remaining.append(num)
+
+        # Sort the remaining elements
+        remaining.sort()
+
+        # Add elements as per relative order
+        for num in arr2:
+            result.extend([num] * count_map[num])
+
+        # Add remaining elements
+        result.extend(remaining)
+
+        return result
