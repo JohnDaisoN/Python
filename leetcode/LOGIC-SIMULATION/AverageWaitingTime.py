@@ -46,3 +46,13 @@ class Solution(object):
 this is pretty neat code - only small problem but when you see two testcases and the
 method of solving - karyangal petennuy kathum
 '''
+#below is smaller solution
+class Solution:
+    def averageWaitingTime(self, customers) -> float:
+        available_at = 0
+        total_wait = 0
+        for arrival, t in customers:
+            available_at = max(available_at, arrival) + t
+            total_wait += available_at - arrival
+        
+        return total_wait / len(customers)
