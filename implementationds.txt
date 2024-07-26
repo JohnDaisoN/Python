@@ -1,0 +1,33 @@
+class TreeNode:
+    def __init__(self,val):
+        self.val = val
+        self.children = []
+
+    def addChild(self,child):
+        child.parent = self
+        self.children.append(child)
+
+    while i < len(graph):
+        
+
+
+if __name__ == "__main__":
+    root = build_product_tree()
+
+
+BINARY TREE node# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+     def addchild(self,data):
+        if data -- self.data
+            return
+        if self.left:
+            self.left.
+        else:
+            self.left = binary(data)
+
+        
+
