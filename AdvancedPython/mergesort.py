@@ -7,7 +7,7 @@ def mergesort(arr):
         mergesort(r)
         merge(l,r,arr)
 
-    return 
+    return arr
 
 def merge(left,right,arr):
     l = 0
