@@ -95,7 +95,7 @@ def redundantparantheses(s):
 #         while 
 
 def makevalid(s):
-    Map = {")": "(", "]": "[", "}": "{"}
+    Map = {")": "("}
     stack = []
     ans = 0
 
